@@ -1,0 +1,18 @@
+[
+  {
+    "app": "Payment",
+    "env": "Production",
+    "url": "https://google.com"
+  },
+  {
+    "app": "Auth",
+    "env": "UAT",
+    "url": "https://github.com"
+  },
+  {
+    "app": "Auth",
+    "env": "UAT",
+    "url": "https://github.com"
+  }
+
+]
