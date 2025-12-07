@@ -2,12 +2,28 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
-const tls = require("tls");
+const https = require("https");
+const { HttpsProxyAgent } = require("https-proxy-agent");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
+
+/* ================= PROXY CONFIG (HARDCODED) ================= */
+
+const PROXY_URL = "http://proxy.conexus.svc.local:3128";
+
+/* If you want env override, uncomment below
+const PROXY_URL =
+  process.env.https_proxy ||
+  process.env.http_proxy ||
+  "http://proxy.conexus.svc.local:3128";
+*/
+
+const proxyAgent = new HttpsProxyAgent(PROXY_URL);
+
+/* ============================================================= */
 
 const DATA_FILE = path.join(__dirname, "apps.json");
 const ADMIN_PASSWORD = "Dwsazureadmin@";
@@ -22,34 +38,33 @@ function writeApps(data) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
 }
 
-/* ---------- SSL EXPIRY (VPN SAFE) ---------- */
+/* ---------- SSL EXPIRY (VIA PROXY) ---------- */
 function getSSLCertExpiry(url) {
   return new Promise((resolve, reject) => {
     try {
-      // ✅ Proper URL parsing
       const parsed = new URL(url);
-      const hostname = parsed.hostname;
 
-      const socket = tls.connect(
-        {
-          host: hostname,
-          port: 443,
-          servername: hostname,          // ✅ SNI is CRITICAL
-          rejectUnauthorized: false       // ✅ corporate MITM safe
-        },
-        () => {
-          const cert = socket.getPeerCertificate(true); // ✅ FULL CHAIN
-          socket.end();
+      const options = {
+        hostname: parsed.hostname,
+        port: 443,
+        method: "GET",
+        path: "/",                 // ✅ path NOT required for cert
+        agent: proxyAgent,         // ✅ proxy tunnel
+        rejectUnauthorized: false  // ✅ internal certs
+      };
 
-          if (!cert || !cert.valid_to) {
-            return reject("Certificate not found");
-          }
+      const req = https.request(options, res => {
+        const cert = res.socket.getPeerCertificate(true);
 
-          resolve(cert.valid_to);
+        if (!cert || !cert.valid_to) {
+          return reject("Certificate not found");
         }
-      );
 
-      socket.on("error", err => reject(err.message));
+        resolve(cert.valid_to);
+      });
+
+      req.on("error", err => reject(err.message));
+      req.end();
     } catch (err) {
       reject(err.message);
     }
@@ -75,10 +90,9 @@ app.post("/check-ssl", async (req, res) => {
       expiryDate: new Date(expiryDate).toISOString().split("T")[0],
       daysLeft
     });
-
   } catch (err) {
     res.json({
-      expiryDate: "Unable to read (VPN/Proxy)",
+      expiryDate: "Unable to read (Proxy/VPN)",
       daysLeft: "-"
     });
   }
@@ -117,4 +131,5 @@ app.delete("/apps", (req, res) => {
 /* ---------- START ---------- */
 app.listen(3000, () => {
   console.log("✅ Server running at http://localhost:3000");
+  console.log("✅ Proxy in use:", PROXY_URL);
 });
