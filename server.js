@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
-const https = require("https");
+const tls = require("tls");
 
 const app = express();
 app.use(cors());
@@ -22,47 +22,47 @@ function writeApps(data) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
 }
 
-/* ---------- SSL via HTTPS (VPN / Proxy friendly) ---------- */
+/* ---------- SSL EXPIRY (VPN SAFE) ---------- */
 function getSSLCertExpiry(url) {
   return new Promise((resolve, reject) => {
     try {
+      // ✅ Proper URL parsing
       const parsed = new URL(url);
+      const hostname = parsed.hostname;
 
-      const req = https.request(
+      const socket = tls.connect(
         {
-          host: parsed.hostname,
-          port: parsed.port || 443,
-          method: "GET",
-          path: "/",                     // ✅ path does NOT matter for SSL
-          rejectUnauthorized: false
+          host: hostname,
+          port: 443,
+          servername: hostname,          // ✅ SNI is CRITICAL
+          rejectUnauthorized: false       // ✅ corporate MITM safe
         },
-        res => {
-          const cert = res.socket.getPeerCertificate();
+        () => {
+          const cert = socket.getPeerCertificate(true); // ✅ FULL CHAIN
+          socket.end();
 
           if (!cert || !cert.valid_to) {
-            return reject("No certificate found");
+            return reject("Certificate not found");
           }
 
           resolve(cert.valid_to);
         }
       );
 
-      req.on("error", reject);
-      req.end();
-
+      socket.on("error", err => reject(err.message));
     } catch (err) {
       reject(err.message);
     }
   });
 }
 
-/* ---------- CHECK SSL ENDPOINT ---------- */
+/* ---------- CHECK SSL ---------- */
 app.post("/check-ssl", async (req, res) => {
   try {
     const { url } = req.body;
 
     if (!url || !url.startsWith("https://")) {
-      return res.json({ expiryDate: "N/A", daysLeft: Infinity });
+      return res.json({ expiryDate: "Invalid URL", daysLeft: "-" });
     }
 
     const expiryDate = await getSSLCertExpiry(url);
@@ -76,16 +76,15 @@ app.post("/check-ssl", async (req, res) => {
       daysLeft
     });
 
-  } catch (e) {
-    // ✅ VPN / internal / blocked URLs land here safely
+  } catch (err) {
     res.json({
-      expiryDate: "VPN / Internal",
-      daysLeft: Infinity
+      expiryDate: "Unable to read (VPN/Proxy)",
+      daysLeft: "-"
     });
   }
 });
 
-/* ---------- Apps API ---------- */
+/* ---------- APPS API ---------- */
 app.get("/apps", (req, res) => {
   res.json(readApps());
 });
