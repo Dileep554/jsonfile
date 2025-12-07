@@ -23,32 +23,54 @@ function writeApps(data) {
 }
 
 /* ---------- SSL expiry ---------- */
-function getSSLCertExpiry(hostname) {
+function getSSLCertExpiry(hostname, port = 443) {
   return new Promise((resolve, reject) => {
     const socket = tls.connect(
-      443,
-      hostname,
-      { servername: hostname, rejectUnauthorized: false },
+      {
+        host: hostname,
+        port,
+        servername: hostname,          // ✅ REQUIRED for SNI
+        rejectUnauthorized: false
+      },
       () => {
         const cert = socket.getPeerCertificate();
         socket.end();
+
+        if (!cert || !cert.valid_to) {
+          return reject("Certificate not found");
+        }
+
         resolve(cert.valid_to);
       }
     );
+
     socket.on("error", err => reject(err.message));
   });
 }
 
+/* ---------- CHECK SSL ---------- */
 app.post("/check-ssl", async (req, res) => {
   try {
-    const hostname = req.body.url.replace(/^https?:\/\//, "");
-    const expiryDate = await getSSLCertExpiry(hostname);
+    const { url } = req.body;
+
+    if (!url || !url.startsWith("https://")) {
+      return res.json({ expiryDate: "N/A", daysLeft: Infinity });
+    }
+
+    // ✅ THIS FIXES EVERYTHING
+    const parsed = new URL(url);
+    const hostname = parsed.hostname;   // ✅ removes path safely
+    const port = parsed.port || 443;
+
+    const expiryDate = await getSSLCertExpiry(hostname, port);
+
     const daysLeft = Math.ceil(
       (new Date(expiryDate) - new Date()) / (1000 * 60 * 60 * 24)
     );
+
     res.json({ expiryDate, daysLeft });
   } catch (e) {
-    res.status(500).json({ error: e.toString() });
+    res.json({ expiryDate: "N/A", daysLeft: Infinity });
   }
 });
 
@@ -59,6 +81,7 @@ app.get("/apps", (req, res) => {
 
 app.post("/apps", (req, res) => {
   const { app: a, env, url, adminPassword } = req.body;
+
   if (adminPassword !== ADMIN_PASSWORD)
     return res.status(401).json({ message: "Unauthorized" });
 
@@ -70,6 +93,7 @@ app.post("/apps", (req, res) => {
 
 app.delete("/apps", (req, res) => {
   const { url, adminPassword } = req.body;
+
   if (adminPassword !== ADMIN_PASSWORD)
     return res.status(401).json({ message: "Unauthorized" });
 
@@ -78,6 +102,7 @@ app.delete("/apps", (req, res) => {
   res.json(apps);
 });
 
+/* ---------- START ---------- */
 app.listen(3000, () =>
   console.log("✅ Server running at http://localhost:3000")
 );
