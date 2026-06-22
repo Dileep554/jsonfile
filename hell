@@ -1,117 +1,230 @@
-import re
-import os
+5167fc1a024/TX]
+genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS: Refreshing state... [id=7ab32208-ee73-4eae-973e-f5167fc1a024/KS]
+╷
+│ Warning: Value for undeclared variable
+│
+│ The root module does not declare a variable named "dev_location" but a
+│ value was found in file
+│ "/home/tfc-agent/.tfc-agent/component/terraform/runs/run-dfvD3zo2VNovyRJv/terraform.tfvars".
+│ If you meant to use this value, add a "variable" block to the
+│ configuration.
+│
+│ To silence these warnings, use TF_VAR_... environment variables to provide
+│ certain "global" settings to all configurations in your organization. To
+│ reduce the verbosity of these warnings, use the -compact-warnings option.
+╵
+╷
+│ Warning: Resource targeting is in effect
+│
+│ You are creating a plan with the -target option, which means that the
+│ result of this plan may not represent all of the changes requested by the
+│ current configuration.
+│
+│ The -target option is not for routine use, and is provided only for
+│ exceptional situations such as recovering from errors or mistakes, or when
+│ Terraform specifically suggests to use it as part of an error message.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_BILLING",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+╷
+│ Error: Cannot import non-existent remote object
+│
+│ While attempting to import an existing object to
+│ "genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845",
+│ the provider detected that no object exists with the given id. Only
+│ pre-existing objects can be imported; check that the id is correct and that
+│ it is associated with the provider's configured region or endpoint, or use
+│ "terraform apply" to create a new remote object for this resource.
+╵
+Operation failed: failed running terraform plan (exit 1)
 
-base_dir = "."
+─────────────────────────────────────────────────────────────────────────────
 
-print("🚀 Smart Auto-Fix Started...")
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+❌ import Failed - Check logs
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // container
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // podTemplate
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
 
-# =========================
-# ✅ FIX RESPONSE (texts block)
-# =========================
-def fix_response_blocks(content):
-    def replacer(match):
-        block = match.group(0)
+GitHub has been notified of this commit’s build result
 
-        if "texts {" not in block:
-            block = block.rstrip("}") + """
-  texts {
-    content = "Auto-generated"
-  }
-}"""
-        return block
-
-    return re.sub(
-        r'resource\s+"genesyscloud_responsemanagement_response"[\s\S]*?\n\}',
-        replacer,
-        content
-    )
-
-# =========================
-# ✅ FIX INTEGRATION REQUEST
-# =========================
-def fix_integration_blocks(content):
-    def replacer(match):
-        block = match.group(0)
-
-        if "request_type" not in block:
-            block = block.replace(
-                "config_request {",
-                """config_request {
-    request_type = "GET"
-    request_url_template = "/"
-"""
-            )
-        return block
-
-    return re.sub(
-        r'resource\s+"genesyscloud_integration_action_draft"[\s\S]*?\n\}',
-        replacer,
-        content
-    )
-
-# =========================
-# ✅ FIX WEBHOOK
-# =========================
-def fix_webhook_blocks(content):
-    def replacer(match):
-        block = match.group(0)
-
-        if "outbound_notification_webhook_signature_secret_token" not in block:
-            block = block.rstrip("}") + """
-  outbound_notification_webhook_signature_secret_token = "dummy-token"
-}"""
-        return block
-
-    return re.sub(
-        r'resource\s+"genesyscloud_conversations_messaging_integrations_open"[\s\S]*?\n\}',
-        replacer,
-        content
-    )
-
-# =========================
-# ✅ REMOVE UNSUPPORTED FIELD
-# =========================
-def remove_unsupported(content):
-    return re.sub(
-        r'\s*callable_time_column_name\s*=\s*".*?"',
-        '',
-        content
-    )
-
-# =========================
-# ✅ MAIN
-# =========================
-for root, _, files in os.walk(base_dir):
-    for fname in files:
-        if fname.endswith(".tf"):
-
-            path = os.path.join(root, fname)
-
-            with open(path, "r", encoding="utf-8") as f:
-                content = f.read()
-
-            original = content
-
-            content = remove_unsupported(content)
-            content = fix_response_blocks(content)
-            content = fix_integration_blocks(content)
-            content = fix_webhook_blocks(content)
-
-            # =========================
-            # ✅ FIX ONLY ROUTING QUEUE FILE ISSUE
-            # =========================
-            if fname == "genesyscloud_routing_queue.tf":
-                content = re.sub(
-                    r'division_id\s*=\s*"\$"',
-                    'division_id = genesyscloud_auth_division.Commercial.id',
-                    content
-                )
-
-            if content != original:
-                with open(path, "w", encoding="utf-8") as f:
-                    f.write(content)
-                print(f"✅ Fixed: {fname}")
-            else:
-                print(f"➖ No change: {fname}")
-
-print("\n✅ Smart Fix Completed")
+Finished: FAILURE
