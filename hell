@@ -1,223 +1,117 @@
-genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789: Destruction complete after 0s
-genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061: Destruction complete after 0s
-genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX: Destruction complete after 1s
-genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT: Destruction complete after 1s
-╷
-│ Warning: Value for undeclared variable
-│
-│ The root module does not declare a variable named "dev_location" but a
-│ value was found in file
-│ "/home/tfc-agent/.tfc-agent/component/terraform/runs/run-QW1o5DUxhU1Ui1eq/terraform.tfvars".
-│ If you meant to use this value, add a "variable" block to the
-│ configuration.
-│
-│ To silence these warnings, use TF_VAR_... environment variables to provide
-│ certain "global" settings to all configurations in your organization. To
-│ reduce the verbosity of these warnings, use the -compact-warnings option.
-╵
-╷
-│ Error: Failed to create architect_datatable DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV error: API Error: 409 - The DataTable 'title' is not unique (4a37e58d-3a5b-4b51-bfd6-17e59404629a)
-│
-│   with genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV,
-│   on genesyscloud_architect_datatable.tf line 877, in resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV":
-│  877: resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV" {
-│
-│ {"resourceType":"genesyscloud_architect_datatable","method":"POST","path":"/api/v2/flows/datatables","statusCode":409,"errorMessage":"API
-│ Error: 409 - The DataTable 'title' is not unique
-│ (4a37e58d-3a5b-4b51-bfd6-17e59404629a)","correlationId":"4a37e58d-3a5b-4b51-bfd6-17e59404629a"}
-╵
-╷
-│ Error: Failed to create architect_datatable DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV error: API Error: 409 - The DataTable 'title' is not unique (7c3e6c7a-a063-48cb-baad-b1eb1e17c4a6)
-│
-│   with genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV,
-│   on genesyscloud_architect_datatable.tf line 1965, in resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV":
-│ 1965: resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV" {
-│
-│ {"resourceType":"genesyscloud_architect_datatable","method":"POST","path":"/api/v2/flows/datatables","statusCode":409,"errorMessage":"API
-│ Error: 409 - The DataTable 'title' is not unique
-│ (7c3e6c7a-a063-48cb-baad-b1eb1e17c4a6)","correlationId":"7c3e6c7a-a063-48cb-baad-b1eb1e17c4a6"}
-╵
-╷
-│ Error: Failed to create architect_datatable DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV error: API Error: 409 - The DataTable 'title' is not unique (eb310184-6dbe-41ae-bc18-79b3881272c5)
-│
-│   with genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV,
-│   on genesyscloud_architect_datatable.tf line 2373, in resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV":
-│ 2373: resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV" {
-│
-│ {"resourceType":"genesyscloud_architect_datatable","method":"POST","path":"/api/v2/flows/datatables","statusCode":409,"errorMessage":"API
-│ Error: 409 - The DataTable 'title' is not unique
-│ (eb310184-6dbe-41ae-bc18-79b3881272c5)","correlationId":"eb310184-6dbe-41ae-bc18-79b3881272c5"}
-╵
-╷
-│ Error: Failed to create architect_datatable DIRECTV_AMBUSH_GLOBAL_PERF error: API Error: 409 - The DataTable 'title' is not unique (d053f502-3b16-4fbc-aa81-a63ec905d06c)
-│
-│   with genesyscloud_architect_datatable.DIRECTV_AMBUSH_GLOBAL_PERF,
-│   on genesyscloud_architect_datatable.tf line 1198, in resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_GLOBAL_PERF":
-│ 1198: resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_GLOBAL_PERF" {
-│
-│ {"resourceType":"genesyscloud_architect_datatable","method":"POST","path":"/api/v2/flows/datatables","statusCode":409,"errorMessage":"API
-│ Error: 409 - The DataTable 'title' is not unique
-│ (d053f502-3b16-4fbc-aa81-a63ec905d06c)","correlationId":"d053f502-3b16-4fbc-aa81-a63ec905d06c"}
-╵
-╷
-│ Warning: Applied changes may be incomplete
-│
-│ The plan was created with the -target option in effect, so some changes
-│ requested in the configuration may have been ignored and the output values
-│ may not be fully updated. Run the following command to verify that no other
-│ changes are pending:
-│     terraform plan
-│
-│ Note that the -target option is not suitable for routine use, and is
-│ provided only for exceptional situations such as recovering from errors or
-│ mistakes, or when Terraform specifically suggests to use it as part of an
-│ error message.
-╵
-Operation failed: failed running terraform apply (exit 1)
-[Pipeline] }
-[Pipeline] // dir
-[Pipeline] }
-[Pipeline] // stage
-[Pipeline] stage
-[Pipeline] { (Declarative: Post Actions)
-[Pipeline] echo
-❌ import Failed - Check logs
-[Pipeline] }
-[Pipeline] // stage
-[Pipeline] }
-[Pipeline] // withEnv
-[Pipeline] }
-[Pipeline] // withCredentials
-[Pipeline] }
-[Pipeline] // container
-[Pipeline] }
-[Pipeline] // withEnv
-[Pipeline] }
-[Pipeline] // node
-[Pipeline] }
-[Pipeline] // podTemplate
-[Pipeline] End of Pipeline
-ERROR: script returned exit code 1
+import re
+import os
 
-GitHub has been notified of this commit’s build result
+base_dir = "."
 
-Finished: FAILURE
+print("🚀 Smart Auto-Fix Started...")
 
+# =========================
+# ✅ FIX RESPONSE (texts block)
+# =========================
+def fix_response_blocks(content):
+    def replacer(match):
+        block = match.group(0)
 
+        if "texts {" not in block:
+            block = block.rstrip("}") + """
+  texts {
+    content = "Auto-generated"
+  }
+}"""
+        return block
 
+    return re.sub(
+        r'resource\s+"genesyscloud_responsemanagement_response"[\s\S]*?\n\}',
+        replacer,
+        content
+    )
 
+# =========================
+# ✅ FIX INTEGRATION REQUEST
+# =========================
+def fix_integration_blocks(content):
+    def replacer(match):
+        block = match.group(0)
 
+        if "request_type" not in block:
+            block = block.replace(
+                "config_request {",
+                """config_request {
+    request_type = "GET"
+    request_url_template = "/"
+"""
+            )
+        return block
 
+    return re.sub(
+        r'resource\s+"genesyscloud_integration_action_draft"[\s\S]*?\n\}',
+        replacer,
+        content
+    )
 
+# =========================
+# ✅ FIX WEBHOOK
+# =========================
+def fix_webhook_blocks(content):
+    def replacer(match):
+        block = match.group(0)
 
+        if "outbound_notification_webhook_signature_secret_token" not in block:
+            block = block.rstrip("}") + """
+  outbound_notification_webhook_signature_secret_token = "dummy-token"
+}"""
+        return block
 
+    return re.sub(
+        r'resource\s+"genesyscloud_conversations_messaging_integrations_open"[\s\S]*?\n\}',
+        replacer,
+        content
+    )
 
+# =========================
+# ✅ REMOVE UNSUPPORTED FIELD
+# =========================
+def remove_unsupported(content):
+    return re.sub(
+        r'\s*callable_time_column_name\s*=\s*".*?"',
+        '',
+        content
+    )
 
+# =========================
+# ✅ MAIN
+# =========================
+for root, _, files in os.walk(base_dir):
+    for fname in files:
+        if fname.endswith(".tf"):
 
+            path = os.path.join(root, fname)
 
+            with open(path, "r", encoding="utf-8") as f:
+                content = f.read()
 
-hcp terraform
-Warning: Value for undeclared variable
-The root module does not declare a variable named "dev_location" but a value was found in file "/home/tfc-agent/.tfc-agent/component/terraform/runs/run-QW1o5DUxhU1Ui1eq/terraform.tfvars". If you meant to use this value, add a "variable" block to the configuration.
+            original = content
 
-To silence these warnings, use TF_VAR_... environment variables to provide certain "global" settings to all configurations in your organization. To reduce the verbosity of these warnings, use the -compact-warnings option.
-Error: Failed to create architect_datatable DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV error: API Error: 409 - The DataTable 'title' is not unique (4a37e58d-3a5b-4b51-bfd6-17e59404629a)
-with genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV
-on genesyscloud_architect_datatable.tf line 877, in resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV":
-resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV" {
-{"resourceType":"genesyscloud_architect_datatable","method":"POST","path":"/api/v2/flows/datatables","statusCode":409,"errorMessage":"API Error: 409 - The DataTable 'title' is not unique (4a37e58d-3a5b-4b51-bfd6-17e59404629a)","correlationId":"4a37e58d-3a5b-4b51-bfd6-17e59404629a"}
-Error: Failed to create architect_datatable DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV error: API Error: 409 - The DataTable 'title' is not unique (7c3e6c7a-a063-48cb-baad-b1eb1e17c4a6)
-with genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV
-on genesyscloud_architect_datatable.tf line 1965, in resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV":
-resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV" {
-{"resourceType":"genesyscloud_architect_datatable","method":"POST","path":"/api/v2/flows/datatables","statusCode":409,"errorMessage":"API Error: 409 - The DataTable 'title' is not unique (7c3e6c7a-a063-48cb-baad-b1eb1e17c4a6)","correlationId":"7c3e6c7a-a063-48cb-baad-b1eb1e17c4a6"}
-Error: Failed to create architect_datatable DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV error: API Error: 409 - The DataTable 'title' is not unique (eb310184-6dbe-41ae-bc18-79b3881272c5)
-with genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV
-on genesyscloud_architect_datatable.tf line 2373, in resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV":
-resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV" {
-{"resourceType":"genesyscloud_architect_datatable","method":"POST","path":"/api/v2/flows/datatables","statusCode":409,"errorMessage":"API Error: 409 - The DataTable 'title' is not unique (eb310184-6dbe-41ae-bc18-79b3881272c5)","correlationId":"eb310184-6dbe-41ae-bc18-79b3881272c5"}
-Error: Failed to create architect_datatable DIRECTV_AMBUSH_GLOBAL_PERF error: API Error: 409 - The DataTable 'title' is not unique (d053f502-3b16-4fbc-aa81-a63ec905d06c)
-with genesyscloud_architect_datatable.DIRECTV_AMBUSH_GLOBAL_PERF
-on genesyscloud_architect_datatable.tf line 1198, in resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_GLOBAL_PERF":
-resource "genesyscloud_architect_datatable" "DIRECTV_AMBUSH_GLOBAL_PERF" {
-{"resourceType":"genesyscloud_architect_datatable","method":"POST","path":"/api/v2/flows/datatables","statusCode":409,"errorMessage":"API Error: 409 - The DataTable 'title' is not unique (d053f502-3b16-4fbc-aa81-a63ec905d06c)","correlationId":"d053f502-3b16-4fbc-aa81-a63ec905d06c"}
-Warning: Applied changes may be incomplete
-The plan was created with the -target option in effect, so some changes requested in the configuration may have been ignored and the output values may not be fully updated. Run the following command to verify that no other changes are pending:
-    terraform plan
+            content = remove_unsupported(content)
+            content = fix_response_blocks(content)
+            content = fix_integration_blocks(content)
+            content = fix_webhook_blocks(content)
 
-Note that the -target option is not suitable for routine use, and is provided only for exceptional situations such as recovering from errors or mistakes, or when Terraform specifically suggests to use it as part of an error message.
+            # =========================
+            # ✅ FIX ONLY ROUTING QUEUE FILE ISSUE
+            # =========================
+            if fname == "genesyscloud_routing_queue.tf":
+                content = re.sub(
+                    r'division_id\s*=\s*"\$"',
+                    'division_id = genesyscloud_auth_division.Commercial.id',
+                    content
+                )
 
-Terraform v1.12.1
-on linux_amd64
-Initializing plugins and modules...
-{"@level":"info","@message":"Terraform 1.12.1","@module":"terraform.ui","@timestamp":"2026-06-22T18:28:10.343237Z","terraform":"1.12.1","type":"version","ui":"1.2"}
-{"@level":"info","@message":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_GLOBAL_PERF: Plan to create","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730026Z","change":{"resource":{"addr":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_GLOBAL_PERF","module":"","resource":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_GLOBAL_PERF","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable","resource_name":"DIRECTV_AMBUSH_GLOBAL_PERF","resource_key":null},"action":"create"},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV: Plan to create","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730288Z","change":{"resource":{"addr":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV","module":"","resource":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV","resource_key":null},"action":"create"},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV: Plan to create","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730350Z","change":{"resource":{"addr":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV","module":"","resource":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable","resource_name":"DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV","resource_key":null},"action":"create"},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV: Plan to create","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730444Z","change":{"resource":{"addr":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV","module":"","resource":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable","resource_name":"DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV","resource_key":null},"action":"create"},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730497Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"1702b11f-8550-4eea-955f-0ad113c50f52/OUTAGE"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_BILLING: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730537Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_BILLING","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_BILLING","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_GLOBAL_PERF_BILLING","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"1702b11f-8550-4eea-955f-0ad113c50f52/BILLING"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730555Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"1702b11f-8550-4eea-955f-0ad113c50f52/UPFRONT"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730573Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/2485062273"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730647Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/3179571845"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730665Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/5024252261"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730682Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/19176365983"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730699Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/2147930631"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730718Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/4440193400"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730749Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/13179571845"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730771Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/13235888781"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730796Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/9413731631"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730839Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/9176365983"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730860Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"781e6e63-1238-46d5-b187-787d8117bec8/66061"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730892Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"781e6e63-1238-46d5-b187-787d8117bec8/75789"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730933Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"7ab32208-ee73-4eae-973e-f5167fc1a024/TX"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS: Plan to replace","@module":"terraform.ui","@timestamp":"2026-06-22T18:31:33.730959Z","change":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS","resource_key":null},"action":"replace","reason":"cannot_update","importing":{"id":"7ab32208-ee73-4eae-973e-f5167fc1a024/KS"}},"type":"planned_change"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983: Destroying... [id=b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/19176365983]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.531232Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983","resource_key":null},"action":"delete","id_key":"id","id_value":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/19176365983"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845: Destroying... [id=b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/3179571845]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.531330Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845","resource_key":null},"action":"delete","id_key":"id","id_value":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/3179571845"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631: Destroying... [id=b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/2147930631]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.531352Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631","resource_key":null},"action":"delete","id_key":"id","id_value":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/2147930631"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273: Destroying... [id=b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/2485062273]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.531276Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273","resource_key":null},"action":"delete","id_key":"id","id_value":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/2485062273"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261: Destroying... [id=b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/5024252261]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.531295Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261","resource_key":null},"action":"delete","id_key":"id","id_value":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/5024252261"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845: Destroying... [id=b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/13179571845]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.531319Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845","resource_key":null},"action":"delete","id_key":"id","id_value":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/13179571845"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631: Destroying... [id=b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/9413731631]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.531356Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631","resource_key":null},"action":"delete","id_key":"id","id_value":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/9413731631"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS: Destroying... [id=7ab32208-ee73-4eae-973e-f5167fc1a024/KS]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.531361Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS","resource_key":null},"action":"delete","id_key":"id","id_value":"7ab32208-ee73-4eae-973e-f5167fc1a024/KS"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE: Destroying... [id=1702b11f-8550-4eea-955f-0ad113c50f52/OUTAGE]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.531398Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE","resource_key":null},"action":"delete","id_key":"id","id_value":"1702b11f-8550-4eea-955f-0ad113c50f52/OUTAGE"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983: Destroying... [id=b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/9176365983]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.531273Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983","resource_key":null},"action":"delete","id_key":"id","id_value":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/9176365983"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.916864Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_3179571845","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.948225Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13179571845","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.948320Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_19176365983","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.948268Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_5024252261","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.975996Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9413731631","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.976032Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_GLOBAL_PERF_OUTAGE","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.976049Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2485062273","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.976070Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_9176365983","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400: Destroying... [id=b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/4440193400]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:06.977061Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400","resource_key":null},"action":"delete","id_key":"id","id_value":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/4440193400"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_BILLING: Destroying... [id=1702b11f-8550-4eea-955f-0ad113c50f52/BILLING]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.006264Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_BILLING","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_BILLING","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_GLOBAL_PERF_BILLING","resource_key":null},"action":"delete","id_key":"id","id_value":"1702b11f-8550-4eea-955f-0ad113c50f52/BILLING"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.035046Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_2147930631","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781: Destroying... [id=b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/13235888781]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.036154Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781","resource_key":null},"action":"delete","id_key":"id","id_value":"b04b3d03-f0fa-4a9e-92ca-961ccb8fb3b4/13235888781"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789: Destroying... [id=781e6e63-1238-46d5-b187-787d8117bec8/75789]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.064046Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789","resource_key":null},"action":"delete","id_key":"id","id_value":"781e6e63-1238-46d5-b187-787d8117bec8/75789"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061: Destroying... [id=781e6e63-1238-46d5-b187-787d8117bec8/66061]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.091255Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061","resource_key":null},"action":"delete","id_key":"id","id_value":"781e6e63-1238-46d5-b187-787d8117bec8/66061"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX: Destroying... [id=7ab32208-ee73-4eae-973e-f5167fc1a024/TX]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.117368Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX","resource_key":null},"action":"delete","id_key":"id","id_value":"7ab32208-ee73-4eae-973e-f5167fc1a024/TX"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT: Destroying... [id=1702b11f-8550-4eea-955f-0ad113c50f52/UPFRONT]","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.152113Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT","resource_key":null},"action":"delete","id_key":"id","id_value":"1702b11f-8550-4eea-955f-0ad113c50f52/UPFRONT"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.231046Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_KS","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV: Creating...","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.280483Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV","module":"","resource":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable","resource_name":"DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV","resource_key":null},"action":"create"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV: Creating...","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.280515Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV","module":"","resource":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV","resource_key":null},"action":"create"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_GLOBAL_PERF: Creating...","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.280520Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_GLOBAL_PERF","module":"","resource":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_GLOBAL_PERF","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable","resource_name":"DIRECTV_AMBUSH_GLOBAL_PERF","resource_key":null},"action":"create"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.389511Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_4440193400","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_BILLING: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.419223Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_BILLING","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_BILLING","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_GLOBAL_PERF_BILLING","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.419278Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV_13235888781","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV: Creating...","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.453525Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV","module":"","resource":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable","resource_name":"DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV","resource_key":null},"action":"create"},"type":"apply_start"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.481292Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_75789","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061: Destruction complete after 0s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.481349Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV_66061","resource_key":null},"action":"delete","elapsed_seconds":0},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV: Creation errored after 1s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.531712Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV","module":"","resource":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable","resource_name":"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV","resource_key":null},"action":"create","elapsed_seconds":1},"type":"apply_errored"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX: Destruction complete after 1s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.531784Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV_TX","resource_key":null},"action":"delete","elapsed_seconds":1},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT: Destruction complete after 1s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.531807Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT","module":"","resource":"genesyscloud_architect_datatable_row.DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable_row","resource_name":"DIRECTV_AMBUSH_GLOBAL_PERF_UPFRONT","resource_key":null},"action":"delete","elapsed_seconds":1},"type":"apply_complete"}
-{"@level":"info","@message":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV: Creation errored after 1s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.608836Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV","module":"","resource":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable","resource_name":"DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV","resource_key":null},"action":"create","elapsed_seconds":1},"type":"apply_errored"}
-{"@level":"info","@message":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_GLOBAL_PERF: Creation errored after 1s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.608944Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_GLOBAL_PERF","module":"","resource":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_GLOBAL_PERF","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable","resource_name":"DIRECTV_AMBUSH_GLOBAL_PERF","resource_key":null},"action":"create","elapsed_seconds":1},"type":"apply_errored"}
-{"@level":"info","@message":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV: Creation errored after 1s","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:07.714030Z","hook":{"resource":{"addr":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV","module":"","resource":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV","implied_provider":"genesyscloud","resource_type":"genesyscloud_architect_datatable","resource_name":"DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV","resource_key":null},"action":"create","elapsed_seconds":1},"type":"apply_errored"}
-{"@level":"warn","@message":"Warning: Value for undeclared variable","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:13.916499Z","diagnostic":{"severity":"warning","summary":"Value for undeclared variable","detail":"The root module does not declare a variable named \"dev_location\" but a value was found in file \"/home/tfc-agent/.tfc-agent/component/terraform/runs/run-QW1o5DUxhU1Ui1eq/terraform.tfvars\". If you meant to use this value, add a \"variable\" block to the configuration.\n\nTo silence these warnings, use TF_VAR_... environment variables to provide certain \"global\" settings to all configurations in your organization. To reduce the verbosity of these warnings, use the -compact-warnings option."},"type":"diagnostic"}
-{"@level":"error","@message":"Error: Failed to create architect_datatable DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV error: API Error: 409 - The DataTable 'title' is not unique (4a37e58d-3a5b-4b51-bfd6-17e59404629a)","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:13.952245Z","diagnostic":{"severity":"error","summary":"Failed to create architect_datatable DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV error: API Error: 409 - The DataTable 'title' is not unique (4a37e58d-3a5b-4b51-bfd6-17e59404629a)","detail":"{\"resourceType\":\"genesyscloud_architect_datatable\",\"method\":\"POST\",\"path\":\"/api/v2/flows/datatables\",\"statusCode\":409,\"errorMessage\":\"API Error: 409 - The DataTable 'title' is not unique (4a37e58d-3a5b-4b51-bfd6-17e59404629a)\",\"correlationId\":\"4a37e58d-3a5b-4b51-bfd6-17e59404629a\"}","address":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV","range":{"filename":"genesyscloud_architect_datatable.tf","start":{"line":877,"column":88,"byte":21610},"end":{"line":877,"column":89,"byte":21611}},"snippet":{"context":"resource \"genesyscloud_architect_datatable\" \"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV\"","code":"resource \"genesyscloud_architect_datatable\" \"DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_DEV\" {","start_line":877,"highlight_start_offset":87,"highlight_end_offset":88,"values":[]}},"type":"diagnostic"}
-{"@level":"error","@message":"Error: Failed to create architect_datatable DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV error: API Error: 409 - The DataTable 'title' is not unique (7c3e6c7a-a063-48cb-baad-b1eb1e17c4a6)","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:13.991730Z","diagnostic":{"severity":"error","summary":"Failed to create architect_datatable DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV error: API Error: 409 - The DataTable 'title' is not unique (7c3e6c7a-a063-48cb-baad-b1eb1e17c4a6)","detail":"{\"resourceType\":\"genesyscloud_architect_datatable\",\"method\":\"POST\",\"path\":\"/api/v2/flows/datatables\",\"statusCode\":409,\"errorMessage\":\"API Error: 409 - The DataTable 'title' is not unique (7c3e6c7a-a063-48cb-baad-b1eb1e17c4a6)\",\"correlationId\":\"7c3e6c7a-a063-48cb-baad-b1eb1e17c4a6\"}","address":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV","range":{"filename":"genesyscloud_architect_datatable.tf","start":{"line":1965,"column":86,"byte":51221},"end":{"line":1965,"column":87,"byte":51222}},"snippet":{"context":"resource \"genesyscloud_architect_datatable\" \"DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV\"","code":"resource \"genesyscloud_architect_datatable\" \"DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_DEV\" {","start_line":1965,"highlight_start_offset":85,"highlight_end_offset":86,"values":[]}},"type":"diagnostic"}
-{"@level":"error","@message":"Error: Failed to create architect_datatable DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV error: API Error: 409 - The DataTable 'title' is not unique (eb310184-6dbe-41ae-bc18-79b3881272c5)","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:14.032514Z","diagnostic":{"severity":"error","summary":"Failed to create architect_datatable DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV error: API Error: 409 - The DataTable 'title' is not unique (eb310184-6dbe-41ae-bc18-79b3881272c5)","detail":"{\"resourceType\":\"genesyscloud_architect_datatable\",\"method\":\"POST\",\"path\":\"/api/v2/flows/datatables\",\"statusCode\":409,\"errorMessage\":\"API Error: 409 - The DataTable 'title' is not unique (eb310184-6dbe-41ae-bc18-79b3881272c5)\",\"correlationId\":\"eb310184-6dbe-41ae-bc18-79b3881272c5\"}","address":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV","range":{"filename":"genesyscloud_architect_datatable.tf","start":{"line":2373,"column":93,"byte":63271},"end":{"line":2373,"column":94,"byte":63272}},"snippet":{"context":"resource \"genesyscloud_architect_datatable\" \"DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV\"","code":"resource \"genesyscloud_architect_datatable\" \"DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_STATE_DEV\" {","start_line":2373,"highlight_start_offset":92,"highlight_end_offset":93,"values":[]}},"type":"diagnostic"}
-{"@level":"error","@message":"Error: Failed to create architect_datatable DIRECTV_AMBUSH_GLOBAL_PERF error: API Error: 409 - The DataTable 'title' is not unique (d053f502-3b16-4fbc-aa81-a63ec905d06c)","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:14.059680Z","diagnostic":{"severity":"error","summary":"Failed to create architect_datatable DIRECTV_AMBUSH_GLOBAL_PERF error: API Error: 409 - The DataTable 'title' is not unique (d053f502-3b16-4fbc-aa81-a63ec905d06c)","detail":"{\"resourceType\":\"genesyscloud_architect_datatable\",\"method\":\"POST\",\"path\":\"/api/v2/flows/datatables\",\"statusCode\":409,\"errorMessage\":\"API Error: 409 - The DataTable 'title' is not unique (d053f502-3b16-4fbc-aa81-a63ec905d06c)\",\"correlationId\":\"d053f502-3b16-4fbc-aa81-a63ec905d06c\"}","address":"genesyscloud_architect_datatable.DIRECTV_AMBUSH_GLOBAL_PERF","range":{"filename":"genesyscloud_architect_datatable.tf","start":{"line":1198,"column":74,"byte":30453},"end":{"line":1198,"column":75,"byte":30454}},"snippet":{"context":"resource \"genesyscloud_architect_datatable\" \"DIRECTV_AMBUSH_GLOBAL_PERF\"","code":"resource \"genesyscloud_architect_datatable\" \"DIRECTV_AMBUSH_GLOBAL_PERF\" {","start_line":1198,"highlight_start_offset":73,"highlight_end_offset":74,"values":[]}},"type":"diagnostic"}
-{"@level":"warn","@message":"Warning: Applied changes may be incomplete","@module":"terraform.ui","@timestamp":"2026-06-22T18:32:14.059757Z","diagnostic":{"severity":"warning","summary":"Applied changes may be incomplete","detail":"The plan was created with the -target option in effect, so some changes requested in the configuration may have been ignored and the output values may not be fully updated. Run the following command to verify that no other changes are pending:\n    terraform plan\n\nNote that the -target option is not suitable for routine use, and is provided only for exceptional situations such as recovering from errors or mistakes, or when Terraform specifically suggests to use it as part of an error message."},"type":"diagnostic"}
-Operation failed: failed running terraform apply (exit 1)
+            if content != original:
+                with open(path, "w", encoding="utf-8") as f:
+                    f.write(content)
+                print(f"✅ Fixed: {fname}")
+            else:
+                print(f"➖ No change: {fname}")
+
+print("\n✅ Smart Fix Completed")
