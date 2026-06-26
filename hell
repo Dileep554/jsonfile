@@ -1,572 +1,344 @@
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_10038-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/10038-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_10038-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/10038-ENABLER-ABP" -> (known after apply)
-        key_value       = "10038-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Retry"
-              - Description = "Debit Card declined due to Non Participating bank"
-            }
-        ) -> (known after apply)
++ set +e
++ python3 ../../Scripts/genesys-tf-importer.py dev
++ tee importer.log
+Environment: dev
+Parsing Terraform files...
+Preloading cache...
+
+✅ genesyscloud_webdeployments_configuration.Test_Web_Chat_-_DS
+✅ genesyscloud_webdeployments_deployment.CCAAS_Test
+✅ genesyscloud_webdeployments_deployment.Main_IVR_-_IVR_NLU_Connector_for_Cyara_Botium
+✅ genesyscloud_webdeployments_deployment.POC-BK-WebMessage-Care
+✅ genesyscloud_webdeployments_deployment.POC_Message
+✅ genesyscloud_webdeployments_deployment.POC_Web_Messenger_-_bk988w
+✅ genesyscloud_webdeployments_deployment.TEST_Thanh_Web_Deployment
+✅ genesyscloud_webdeployments_deployment.Test_Web_Chat_-_DS
+✅ COMPLETED
++ IMPORT_EXIT=0
++ echo Importer exit code: 0
+Importer exit code: 0
++ set -e
++ echo Extract missing resources
+Extract missing resources
++ grep ⚠️ Missing importer.log
+grep: importer.log: binary file matches
++ echo ======================================
+======================================
++ echo IMPORT SUMMARY
+IMPORT SUMMARY
++ echo ======================================
+======================================
++ grep -c ⚠️ Missing importer.log
++ COUNT=11546
++ echo Missing resource count: 11546
+Missing resource count: 11546
++ [ 11546 -gt 0 ]
++ cat missing_resources.log
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Generate Destroy Targets)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] dir
+Running in /home/jenkins/agent/workspace/CTDTV_DEVsyncfix_dg7023_fixissue/Terraform/dev-import
+[Pipeline] {
+[Pipeline] fileExists
+[Pipeline] sh
++ python3 ../../Scripts/generate_destroy_targets.py terraform.log
+[Pipeline] echo
+✅ Generated Targets:
+[Pipeline] echo
+-target=genesyscloud_architect_datatable.ATT_Transfer_Table -target=genesyscloud_architect_datatable.Chat_Transfer -target=genesyscloud_architect_datatable.Chat_Transfer_V1 -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_TRANSFER_BY_ANI_PERF -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_TRANSFER_BY_DNIS_PERF -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_ANI_PERF -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_DSALES_UPFRONT_BY_DNIS_PERF -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_OUTAGE_BY_DNIS_PERF -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_OUTAGE_BY_STATE_PERF -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_OUTAGE_BY_ZIP_PERF -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_DNIS_PERF -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_PRODUCT_PERF -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_BILLING_BY_ZIP_PERF -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_POST_TECH_SUPPORT_BY_ZIP_PERF -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_UPFRONT_BY_DNIS_PERF -target=genesyscloud_architect_datatable.DIRECTV_AMBUSH_UPFRONT_BY_ZIP_PERF -target=genesyscloud_architect_datatable.DIRECTV_AutoPay_Error_Codes_PROD -target=genesyscloud_architect_datatable.DIRECTV_Commercial_TFNs -target=genesyscloud_architect_datatable.DIRECTV_Config_Sprint_02 -target=genesyscloud_architect_datatable.DIRECTV_DSALES_ANI_PERF -target=genesyscloud_architect_datatable.DIRECTV_DSALES_DNIS_PERF -target=genesyscloud_architect_datatable.DIRECTV_DSALES_DNIS_PROD -target=genesyscloud_architect_datatable.DIRECTV_DynamicMenus -target=genesyscloud_architect_datatable.DIRECTV_INTENT_BY_SYSTEM_PERF -target=genesyscloud_architect_datatable.DIRECTV_Knowledge_Articles_DEV -target=genesyscloud_architect_datatable.DIRECTV_Knowledge_Articles_PROD -target=genesyscloud_architect_datatable.DIRECTV_QUEUE_SCHEDULE_GROUP_MAPPING_DEV -target=genesyscloud_architect_datatable.DIRECTV_QUEUE_SCHEDULE_GROUP_MAPPING_PROD -target=genesyscloud_architect_datatable.DIRECTV_QUEUE_TRANSFER -target=genesyscloud_architect_datatable.DIRECTV_URL_QUEUE_DEV -target=genesyscloud_architect_datatable.DTV_Accnumber_83 -target=genesyscloud_architect_datatable.DTV_POC_DATA_DO_NOT_USE_DEVELOPMENT_ONLY_ -target=genesyscloud_architect_datatable.DTV_Serialnumbr -target=genesyscloud_architect_datatable.DTV_accesscardnum -target=genesyscloud_architect_datatable.DTV_verfiygenienum -target=genesyscloud_architect_datatable.Directv_IVR_to_VA_Intent_Based_Routing_Dev -target=genesyscloud_architect_datatable.Emergency_queue_routing_disable_Dev -target=genesyscloud_architect_datatable.Emergency_queue_routing_disable_Prod -target=genesyscloud_architect_datatable.GA_techInstallAndRepair -target=genesyscloud_architect_datatable.Import_demo -target=genesyscloud_architect_datatable.Infinity_POC -target=genesyscloud_architect_datatable.Installer_Activation_Pin_S1 -target=genesyscloud_architect_datatable.MerchantID_Table -target=genesyscloud_architect_datatable.Nexstar_TFN_Toggle -target=genesyscloud_architect_datatable.POC_Message_URL -target=genesyscloud_architect_datatable.Queue_Ambush -target=genesyscloud_architect_datatable.Queue_Ambush_Test -target=genesyscloud_architect_datatable.Routing_Rules_Test -target=genesyscloud_architect_datatable.STMS_Collections_Campaign_Settings -target=genesyscloud_architect_datatable.TEST_GETDETAILS -target=genesyscloud_architect_datatable.TEST_PPV -target=genesyscloud_architect_datatable.TFN_Marketing_Bypass -target=genesyscloud_architect_datatable.TR_DevtoDr -target=genesyscloud_architect_datatable.Test_Ambush -target=genesyscloud_architect_datatable.Training_Bypass -target=genesyscloud_architect_datatable.Transfer_Schedule_Check -target=genesyscloud_architect_datatable.Transfers_Table -target=genesyscloud_architect_datatable.VA_Link_Name_to_URL -target=genesyscloud_architect_datatable.Z_DELETE_DIRECTV_Menu_Definitions -target=genesyscloud_architect_datatable_row.API_Test_-_Account_Balance_183672 -target=genesyscloud_architect_datatable_row.API_Test_-_Authentication_by_AccountID_183672 -target=genesyscloud_architect_datatable_row.API_Test_-_Authentication_by_AccountID_25641895 -target=genesyscloud_architect_datatable_row.API_Test_-_Authentication_by_AccountID_8675309 -target=genesyscloud_architect_datatable_row.API_Test_-_Authentication_by_Phone_0123456789 -target=genesyscloud_architect_datatable_row.API_Test_-_Authentication_by_Phone_5558675309 -target=genesyscloud_architect_datatable_row.API_Test_-_Authentication_by_Phone_6183145143 -target=genesyscloud_architect_datatable_row.API_Test_-_Authentication_by_Phone_7817930322 -target=genesyscloud_architect_datatable_row.API_Test_-_Authentication_by_Phone_8897994716 -target=genesyscloud_architect_datatable_row.API_Test_-_Authentication_by_Phone_9359737674 -target=genesyscloud_architect_datatable_row.AccountSourceTable_Test_12345 -target=genesyscloud_architect_datatable_row.AccountSourceTable_Test_25800 -target=genesyscloud_architect_datatable_row.AccountSourceTable_Test_87900 -target=genesyscloud_architect_datatable_row.Ambush_Toggle_Chat -target=genesyscloud_architect_datatable_row.Asurion_Redirect_Table_8009554935 -target=genesyscloud_architect_datatable_row.Asurion_Redirect_Table_8554221614 -target=genesyscloud_architect_datatable_row.Asurion_Redirect_Table_8662298061 -target=genesyscloud_architect_datatable_row.Asurion_Redirect_Table_8664370588 -target=genesyscloud_architect_datatable_row.Asurion_Redirect_Table_8888470050 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_4709458001 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_4709458028 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_4709458030 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_4709458033 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_4709458038 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_4709458040 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_4709458042 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_4709458045 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_4709458051 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_4709458052 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_4709458054 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8002341653 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8002554471 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8003304388 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8003448691 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8003566985 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8003834388 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8004066721 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005191830 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005191851 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005234388 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005303445 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005355411 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005374388 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005574388 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005666074 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005674388 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005704388 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005724388 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005774388 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8005900708 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8006034134 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8007153776 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8007204915 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8007293776 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8007304742 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8007384388 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8008059265 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8008321307 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8008674388 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8009327288 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8009364642 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8009406812 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_8009442500 -target=genesyscloud_architect_datatable_row.Backdoor_Flow_800953777
+target=genesyscloud_user.singaravel_gunasekaran_mydirectv_com -target=genesyscloud_user.sn2576_mydirectv_com -target=genesyscloud_user.so8995_mydirectv_com -target=genesyscloud_user.sowmyaanne_basavaraju_cognizant_com -target=genesyscloud_user.sr1587_mydirectv_com -target=genesyscloud_user.sruthi_keerthana_n_mydirectv_com -target=genesyscloud_user.steven_batts_mydirectv_com -target=genesyscloud_user.steven_varley_mydirectv_com -target=genesyscloud_user.sunil_sharma_directv_com -target=genesyscloud_user.susan_olson_mydirectv_com -target=genesyscloud_user.sx3234_ibm_com -target=genesyscloud_user.thilak_kumar_mydirectv_com -target=genesyscloud_user.tk6859_directv_com -target=genesyscloud_user.trn-dtv360-01_mydirectv_com -target=genesyscloud_user.trn-dtv360-02_mydirectv_com -target=genesyscloud_user.tst-dtv360-s15132_mydirectv_com -target=genesyscloud_user.tst-dtv360-s15133_mydirectv_com -target=genesyscloud_user.tst-dtv360-s15134_mydirectv_com -target=genesyscloud_user.ty2872_directv_com -target=genesyscloud_user.va3234_att_com -target=genesyscloud_user.vivek_nagendra_mydirectv_com -target=genesyscloud_user.vp0430_ibm_com -target=genesyscloud_user.yasaman_sadri_mydirectv_com
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Terraform Init)
+[Pipeline] dir
+Running in /home/jenkins/agent/workspace/CTDTV_DEVsyncfix_dg7023_fixissue/Terraform/dev-import
+[Pipeline] {
+[Pipeline] sh
+process apparently never started in /home/jenkins/agent/workspace/CTDTV_DEVsyncfix_dg7023_fixissue/Terraform/dev-import@tmp/durable-1657b5af
+(running Jenkins temporarily with -Dorg.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS=true might make the problem clearer)
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Plan (Targeted))
+Stage "Plan (Targeted)" skipped due to earlier failure(s)
+[Pipeline] getContext
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (User Approval)
+Stage "User Approval" skipped due to earlier failure(s)
+[Pipeline] getContext
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Apply Targeted Resources)
+Stage "Apply Targeted Resources" skipped due to earlier failure(s)
+[Pipeline] getContext
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+❌ Pipeline failed
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // container
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // podTemplate
+[Pipeline] End of Pipeline
+ERROR: script returned exit code -2
+
+GitHub has been notified of this commit’s build result
+
+Finished: FAILURE
+
+
+
+my jenkins script
+
+pipeline {
+    agent {
+        kubernetes {
+            inheritFrom 'dcp-terraform-node-label'
+            defaultContainer 'dcp-terraform-agent'
+        }
     }
 
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1017-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1017-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1017-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1017-STMS-ABP" -> (known after apply)
-        key_value       = "1017-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Invalid county"
-            }
-        ) -> (known after apply)
+    parameters {
+        choice(name: 'ENV', choices: ['dev','dr','prod'], description: 'Select Environment')
+        string(name:'GIT_BRANCH', defaultValue:'dg7023_fixissue', description:'Git branch')
     }
 
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1018-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1018-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1018-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1018-STMS-ABP" -> (known after apply)
-        key_value       = "1018-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Invalid handle"
-            }
-        ) -> (known after apply)
+    environment {
+        GIT_BRANCH = "${params.GIT_BRANCH}"
+        TF_IMPORT_DIR = "Terraform/${params.ENV}-import"
+
+        TF_VAR_dev_client_id = credentials('dev_genesys_client_id')
+        TF_VAR_dev_client_secret = credentials('dev_genesys_client_secret')
+        TF_VAR_dev_location = "usw2.pure.cloud"
+
+        TF_TOKEN_app_terraform_io = credentials('TF_TOKEN_app_terraform_io')
     }
 
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1025-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1025-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1025-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1025-STMS-ABP" -> (known after apply)
-        key_value       = "1025-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "City is required"
-            }
-        ) -> (known after apply)
+    options {
+        skipDefaultCheckout(true)
     }
 
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1029-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1029-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1029-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1029-STMS-ABP" -> (known after apply)
-        key_value       = "1029-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "State is required"
+    stages {
+
+        stage('Clean Workspace') {
+            steps {
+                deleteDir()
+                checkout scm
             }
-        ) -> (known after apply)
+        }
+
+        stage('Genesys CLI Setup') {
+            steps {
+                configFileProvider([configFile(fileId: 'bc2eca19-528c-49d5-b140-48d7de6fb1ba', variable: 'GC_CONFIG')]) {
+                    sh '''
+                    mkdir -p genesys && cd genesys
+                    curl -O https://sdk-cdn.mypurecloud.com/external/go-cli/linux/latest/gc
+                    chmod +x gc
+                    ./gc version
+
+                    cd ..
+                    mkdir -p $HOME/.gc
+                    cp "$GC_CONFIG" "$HOME/.gc/config.toml"
+                    '''
+                }
+            }
+        }
+
+        stage('Source State import') {
+            steps {
+                dir("Terraform") {
+                    sh '''#!/bin/bash
+                        set -eo pipefail
+
+                        cd ${ENV}-import
+
+                        echo "✅ Safe flatten"
+                        find . -mindepth 2 -name "*.tf" -exec bash -c '
+                        for f; do
+                            base=$(basename "$f")
+                            [ ! -f "$base" ] && cp "$f" .
+                        done
+                        ' _ {} +
+
+                        echo "✅ Fix TF issues"
+                        find . -name "*.tf" -exec sed -i 's/should_keep_url_fragment = false//g' {} \\;
+                        find . -name "*.tf" -exec sed -i 's/callable_time_set_id/callable_time_column_name/g' {} \\;
+
+                        export PATH=$WORKSPACE/genesys:$PATH
+
+                        echo "✅ Terraform init"
+                        tf_1.9 init -upgrade
+
+                        echo "✅ Run importer"
+
+                        set +e
+                        python3 ../../Scripts/genesys-tf-importer.py ${ENV} > importer.log 2>&1
+                        IMPORT_EXIT=$?
+                        set -e
+
+                        echo "Importer exit code: $IMPORT_EXIT"
+
+                        echo "===== IMPORT LOG ====="
+                        tail -50 importer.log || true
+
+                        echo "✅ Extract missing"
+                        grep "⚠️ Missing" importer.log > missing_resources.log || true
+
+                        COUNT=$(grep -c "⚠️ Missing" importer.log || true)
+
+                        echo "Missing count: $COUNT"
+                        [ "$COUNT" -gt 0 ] && cat missing_resources.log
+                    '''
+                }
+            }
+        }
+
+        stage('Generate Destroy Targets') {
+            steps {
+                script {
+                    dir("${TF_IMPORT_DIR}") {
+
+                        if (!fileExists("terraform.log")) {
+                            error("❌ terraform.log not found")
+                        }
+
+                        def rawTargets = sh(
+                            script: "python3 ../../Scripts/generate_destroy_targets.py terraform.log",
+                            returnStdout: true
+                        ).trim()
+
+                        if (!rawTargets) {
+                            error("❌ No targets generated")
+                        }
+
+                        def fixedTargets = rawTargets.split("\\n")
+                            .collect { "-target=${it.trim()}" }
+                            .join(" ")
+
+                        env.targets = fixedTargets
+
+                        echo "✅ TARGETS:"
+                        echo env.targets
+                    }
+                }
+            }
+        }
+
+        stage('Terraform Init') {
+            steps {
+                dir("${TF_IMPORT_DIR}") {
+                    sh "tf_1.9 init -upgrade"
+                }
+            }
+        }
+
+        stage('Plan (Targeted)') {
+            steps {
+                dir("${TF_IMPORT_DIR}") {
+                    sh """
+                    echo "✅ Running plan"
+                    tf_1.9 plan ${env.targets} -no-color > updateplan.txt
+                    cat updateplan.txt
+                    """
+                }
+            }
+        }
+
+        stage('User Approval') {
+            steps {
+                script {
+                    def approval = input(
+                        message: "Apply ONLY these targets?\\n\\n${env.targets}",
+                        parameters: [booleanParam(defaultValue: false, name: 'Approve')]
+                    )
+                    env.applyapproval = approval
+                }
+            }
+        }
+
+        stage('Apply Targeted Resources') {
+            steps {
+                script {
+                    if (env.applyapproval) {
+                        sh """
+                        cd ${TF_IMPORT_DIR}
+                        tf_1.9 apply ${env.targets} -auto-approve -no-color
+                        """
+                    } else {
+                        echo "❌ Skipped apply"
+                    }
+                }
+            }
+        }
     }
 
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1030-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1030-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1030-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1030-STMS-ABP" -> (known after apply)
-        key_value       = "1030-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Street name is required"
-            }
-        ) -> (known after apply)
+    post {
+        success {
+            echo "✅ SUCCESS"
+        }
+        failure {
+            echo "❌ FAILED — check logs"
+        }
     }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1031-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1031-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1031-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1031-STMS-ABP" -> (known after apply)
-        key_value       = "1031-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Retry"
-              - Description = "Zip code is required"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1036-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1036-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1036-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1036-STMS-ABP" -> (known after apply)
-        key_value       = "1036-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "This account needs to be added by the owner of the service area"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1037-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1037-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1037-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1037-STMS-ABP" -> (known after apply)
-        key_value       = "1037-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "The suspension must be canceled before changing the address"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1038-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1038-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1038-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1038-STMS-ABP" -> (known after apply)
-        key_value       = "1038-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "The suspension must be ended before changing the address"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1058-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1058-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1058-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1058-STMS-ABP" -> (known after apply)
-        key_value       = "1058-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Account not found"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1079-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1079-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1079-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1079-STMS-ABP" -> (known after apply)
-        key_value       = "1079-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Invalid control text"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1080-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1080-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1080-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1080-STMS-ABP" -> (known after apply)
-        key_value       = "1080-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Invalid lookup type"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1083-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1083-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1083-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1083-STMS-ABP" -> (known after apply)
-        key_value       = "1083-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Maximum number of records have been retrieved"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_1089-STMS-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1089-STMS-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_1089-STMS-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/1089-STMS-ABP" -> (known after apply)
-        key_value       = "1089-STMS-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Full name is required"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11454-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11454-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11454-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11454-ENABLER-ABP" -> (known after apply)
-        key_value       = "11454-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Retry"
-              - Description = "Last Payment Method is Unavailable"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11455-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11455-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11455-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11455-ENABLER-ABP" -> (known after apply)
-        key_value       = "11455-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Invalid aKind in ObjectKey"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11554-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11554-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11554-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11554-ENABLER-ABP" -> (known after apply)
-        key_value       = "11554-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Item Not Eligible For Void or Reversal due to chargeback"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11613-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11613-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11613-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11613-ENABLER-ABP" -> (known after apply)
-        key_value       = "11613-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Retry"
-              - Description = "Invalid Payment Profile Method Request Choice"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11655-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11655-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11655-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11655-ENABLER-ABP" -> (known after apply)
-        key_value       = "11655-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Retry"
-              - Description = "Invalid value for verifyCreditCard field"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11673-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11673-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11673-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11673-ENABLER-ABP" -> (known after apply)
-        key_value       = "11673-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Retry"
-              - Description = "No Check or Credit Card Information Found"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11674-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11674-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11674-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11674-ENABLER-ABP" -> (known after apply)
-        key_value       = "11674-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Authentication Token Not Valid"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11675-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11675-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11675-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11675-ENABLER-ABP" -> (known after apply)
-        key_value       = "11675-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Must Provide Customer Agreement"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11676-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11676-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11676-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11676-ENABLER-ABP" -> (known after apply)
-        key_value       = "11676-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Customer agreement can only be 20 charcters"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11713-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11713-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11713-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11713-ENABLER-ABP" -> (known after apply)
-        key_value       = "11713-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Retry"
-              - Description = "No Payment Found"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11753-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11753-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11753-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11753-ENABLER-ABP" -> (known after apply)
-        key_value       = "11753-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "FIELDNAME is to long. Max length is: #"
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11754-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11754-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11754-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11754-ENABLER-ABP" -> (known after apply)
-        key_value       = "11754-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Credit policy token must be 16 characters."
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11756-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11756-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11756-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11756-ENABLER-ABP" -> (known after apply)
-        key_value       = "11756-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Credit policy was not found."
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11757-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11757-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11757-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11757-ENABLER-ABP" -> (known after apply)
-        key_value       = "11757-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Can not cancel a policy in Posted status."
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11758-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11758-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11758-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11758-ENABLER-ABP" -> (known after apply)
-        key_value       = "11758-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Credit policy cannot be canceled due to invalid status."
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11759-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11759-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11759-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11759-ENABLER-ABP" -> (known after apply)
-        key_value       = "11759-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Void is restricted.  Must be performed by original payment source."
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11793-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11793-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11793-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11793-ENABLER-ABP" -> (known after apply)
-        key_value       = "11793-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Valid Credit Policy Token or Service Order is required."
-            }
-        ) -> (known after apply)
-    }
-
-  # genesyscloud_architect_datatable_row.DIRECTV_AutoPay_Error_Codes_DEV_11794-ENABLER-ABP must be replaced
-  # (imported from "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11794-ENABLER-ABP")
-  # Warning: this will destroy the imported resource
--/+ resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11794-ENABLER-ABP" {
-      ~ datatable_id    = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629" # forces replacement -> (known after apply) # forces replacement
-      ~ id              = "03ca8ad6-b55b-44ed-9b5c-a47d6770f629/11794-ENABLER-ABP" -> (known after apply)
-        key_value       = "11794-ENABLER-ABP"
-      ~ properties_json = jsonencode(
-            {
-              - Action      = "Escalate to Agent"
-              - Description = "Credit Policy Token or Service Order is not available."
-            }
-        ) -> (known after apply)
-    }
-
-
-still lot there and below is my architectdatatablerow.tf
-resource "genesyscloud_architect_datatable_row" "DIRECTV_AutoPay_Error_Codes_DEV_11794-ENABLER-ABP" {
-  datatable_id    = "${genesyscloud_architect_datatable.DIRECTV_AutoPay_Error_Codes_DEV.id}"
-  key_value       = "11794-ENABLER-ABP"
-  properties_json = jsonencode({
-		"Action": "Escalate to Agent",
-		"Description": "Credit Policy Token or Service Order is not available."
-	})
 }
 
-correct only there and I also verified in GenesyDev Ui same data there but still I could see
-ellite"
-            }
-        )
-    }
 
-  # genesyscloud_architect_datatable_row.DIRECTV_DSALES_DNIS_PROD_8557685785 will be imported
-    resource "genesyscloud_architect_datatable_row" "DIRECTV_DSALES_DNIS_PROD_8557685785" {
-        datatable_id    = "831d1cc8-20e1-4fb7-ad86-7998fe509c68"
-        id              = "831d1cc8-20e1-4fb7-ad86-7998fe509c68/8557685785"
-        key_value       = "8557685785"
-        properties_json = jsonencode(
-            {
-                CSP         = true
-                NEW_ACCOUNT = true
-                PRODUCT     = "Satellite"
-            }
-        )
-    }
 
-  # genesyscloud_architect_datatable_row.DIRECTV_DSALES_DNIS_PROD_8557967278 will be imported
-    resource "genesyscloud_architect_datatable_row" "DIRECTV_DSALES_DNIS_PROD_8557967278" {
-        datatable_id    = "831d1cc8-20e1-4fb7-ad86-7998fe509c68"
-        id              = "831d1cc8-20e1-4fb7-ad86-7998fe509c68/8557967278"
-        key_value       = "8557967278"
-        properties_json = jsonencode(
-            {
-                CSP         = true
-                NEW_ACCOUNT = true
-                PRODUCT     = "Satellite"
-            }
-        )
-    }
+generate_destroy_targets.py
+import re
+import sys
 
-  # genesyscloud_architect_datatable_row.DIRECTV_DSALES_DNIS_PROD_8557967279 will be imported
-    resource "genesyscloud_architect_datatable_row" "DIRECTV_DSALES_DNIS_PROD_8557967279" {
-        datatable_id    = "831d1cc8-20e1-4fb7-ad86-7998fe509c68"
-        id              = "831d1cc8-20e1-4fb7-ad86-7998fe509c68/8557967279"
-        key_value       = "8557967279"
-        properties_json = jsonencode(
-            {
-                CSP         = true
-                NEW_ACCOUNT = true
-                PRODUCT     = "Satellite"
-            }
-        )
-    }
+if len(sys.argv) < 2:
+    print("Usage: python3 generate_destroy_targets.py <terraform_log_file>")
+    sys.exit(1)
 
-  # genesyscloud_architect_datatable_row.DIRECTV_DSALES_DNIS_PROD_8557967280 will be imported
-    resource "genesyscloud_architect_datatable_row" "DIRECTV_DSALES_DNIS_PROD_8557967280" {
-        datatable_id    = "831d1cc8-20e1-4fb7-ad86-7998fe509c68"
-        id              = "831d1cc8-20e1-4fb7-ad86-7998fe509c68/8557967280"
-        key_value       = "8557967280"
-        properties_json = jsonencode(
-            {
-                CSP         = true
-                NEW_ACCOUNT = true
-                PRODUCT     = "Satellite"
-            }
-        )
-    }
+log_file = sys.argv[1]
 
-Plan: 5000 to import, 262 to add, 0 to change, 260 to destroy.
-Could you fix this issue , Iwant below output 
-Plan: 5000 to import, 0 to add, 0 to change, 0 to destroy.
-then only it wont get any issues 
+pattern = re.compile(
+    r'^(?P<resource>[a-zA-Z0-9_]+\.[a-zA-Z0-9_\-]+): Destruction complete',
+    re.MULTILINE
+)
+
+with open(log_file, 'r', encoding='utf-8', errors='ignore') as f:
+    content = f.read()
+
+resources = sorted(set(
+    f'-target={match.group("resource")}'
+    for match in pattern.finditer(content)
+))
+
+if not resources:
+    print("No destroyed resources found.")
+    sys.exit(0)
+
+print(" ".join(resources))
+
+with open("destroy_targets.txt", "w") as f:
+    for r in resources:
+        f.write(r + "\n")
